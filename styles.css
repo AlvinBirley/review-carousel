@@ -1,0 +1,89 @@
+.underlining {
+    height:5px;
+    width: 80px;
+    border-radius: 30px;
+    margin-top: -30px;
+    background-color: rgb(64, 194, 254);
+}
+
+.container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    border: 1px transparent;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 5px;
+}
+
+
+h2 {
+    font-size: 50px;
+}
+
+img {
+    border-radius: 50%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .next-btn {
+  padding: 10px;
+  border: solid rgb(64, 194, 254);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 20px;
+  }
+
+  .prev-btn {
+    padding: 10px;
+    border: solid rgb(64, 194, 254);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+
+  }
+  #job {
+ color:  rgb(64, 194, 254);
+ margin-top: -20px;
+ font-size: 20px;
+  }
+
+  #author {
+    font-size: 20px;
+  }
+
+  .text-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #info {
+    margin-top: -10px;
+  }
