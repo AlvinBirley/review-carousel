@@ -2,37 +2,37 @@
 const reviews = [
 {
     id: 1,
-    name: "susan smith",
-    job: "butcher",
+    name: "Sir Isaac Newton",
+    job: "Polymath",
     img: "images/sir-isaac-newton.jpeg",
-    text: "En diciembre empieza la temporada fuerte de turismo en la ciudad del Pacífico mexicano, pero este año será muy diferente, aunque ya están empezando a llegar los primeros visitantes."
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lectus libero, viverra sit amet ante a, aliquet auctor nibh. Nullam tempor venenatis vulputate."
 
     },
 
  {
-    id: 1,
-    name: "brock adams",
-    job: "web developer",
-    img: "images/galileo_sustermans.thumbnail-3.jpg",
-    text: "En diciembre empieza la temporada fuerte de turismo en la ciudad del Pacífico mexicano, pero este año será muy diferente, aunque ya están empezando a llegar los primeros visitantes."
+    id: 2,
+    name: "François-Marie Arouet",
+    job: "Author",
+    img: "images/voltaire.jpg",
+    text: "Aliquam non enim in justo finibus dignissim quis ut odio. Ut ut neque sit amet magna luctus mattis. Phasellus felis mi, placerat sit amet odio vitae, tempus tincidunt tortor."
     
  },
 
 {
-    id: 1,
-    name: "greg dale",
-    job: "fire fighter",
-    img: "images/Thomas_Hobbes.jpeg",
-    text: "En diciembre empieza la temporada fuerte de turismo en la ciudad del Pacífico mexicano, pero este año será muy diferente, aunque ya están empezando a llegar los primeros visitantes."
+    id: 3,
+    name: "Jonathan Swift",
+    job: "Satirist",
+    img: "images/swift.jpg",
+    text: "Nulla luctus leo tortor, ut pellentesque orci auctor sed. In ac aliquet nibh. Vestibulum eget tellus dui. Etiam varius pretium mauris ut lacinia."
         
 },
 
 {
-    id: 1,
-    name: "steve mckay",
-    job: "farmer",
-    img: "images/download (1).jpeg",
-    text: "En diciembre empieza la temporada fuerte de turismo en la ciudad del Pacífico mexicano, pero este año será muy diferente, aunque ya están empezando a llegar los primeros visitantes."
+    id: 4,
+    name: "John Locke",
+    job: "Philosopher",
+    img: "images/locke.jpeg",
+    text: "Aliquam dictum dui ut dui tempus finibus. Maecenas sagittis cursus consectetur. Maecenas condimentum, felis ut imperdiet laoreet, libero lacus venenatis felis."
             
 }
 
@@ -49,4 +49,41 @@ const nextBtn = document.querySelector(".next-btn");
 
 // set starting item 
 let currentItem = 0;
+
+// load initial item 
+window.addEventListener("DOMContentLoaded", function (){
+  showPerson(currentItem);
+});
+
+// show person based on item
+
+function showPerson(person){
+    const item = reviews[person]
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+}
+
+//show next person
+
+nextBtn.addEventListener("click", function () {
+    currentItem++;
+    if(currentItem > reviews.length - 1) {
+        currentItem = 0;
+    }
+    showPerson(currentItem);
+});
+
+prevBtn.addEventListener("click", function () {
+    currentItem--;
+  console.log(currentItem)
+  if (currentItem<=-1) {
+    currentItem = 3;
+}
+showPerson(currentItem);
+});
+
+
+
 

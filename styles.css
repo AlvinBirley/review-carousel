@@ -81,9 +81,16 @@ img {
   .text-div {
     display: flex;
     align-items: center;
-    flex-direction: column;
-  }
+    flex-direction: column; 
+  
+}
+  
 
   #info {
     margin-top: -10px;
+   
+  }
+
+  .pdiv {
+    width: 300px;
   }
